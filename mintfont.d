@@ -82,19 +82,16 @@ void main( string[] p_InArgs )
         _WarnNonTTFOTF( p_InArgs[1] );
 
         writeln( "INFO: Installing font..." );
-
         writeln( "WARNING: Performing sudo-mode operation; a password may be requested." );
 
         auto t_FFMOut = execute( _FFMVCommand( p_InArgs[1] ) );
 
         writeln( "INFO: FFMV finished; Status code: ", t_FFMOut.status );
-
         writeln( "INFO: Refreshing font cache..." );
 
         auto t_FCRefrOut = execute( G_FCREFR );
 
         writeln( "INFO: Cache refreshing status code: ", t_FCRefrOut.status );
-
         writeln( "INFO: Font installed." );
     } else if( p_InArgs[0] == G_MFUNINSTALL ) {
         if( p_InArgs.length <= 1) {
@@ -133,7 +130,6 @@ void main( string[] p_InArgs )
         auto t_FCRefrOut = execute( G_FCREFR );
 
         writeln( "INFO: Cache refreshing status code: ", t_FCRefrOut.status );
-
         writeln( "INFO: Font uninstalled." );
     } else if( p_InArgs[0] == G_MFINSTALLED ) {
         if( p_InArgs.length <= 1 ) {
@@ -153,3 +149,4 @@ mintfont help - MintFont help.");
         writeln( "ERROR: Unknown command." );
     }
 }
+                
