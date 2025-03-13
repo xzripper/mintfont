@@ -4,7 +4,7 @@
  */
 
 import std.stdio : writeln;
-import std.file : dirEntries, remove, exists, DirEntry, SpanMode, FileException;
+import std.file : dirEntries, remove, exists, SpanMode, DirEntry, FileException;
 import std.process : execute;
 import std.algorithm : endsWith;
 
@@ -149,4 +149,3 @@ mintfont help - MintFont help.");
         writeln( "ERROR: Unknown command." );
     }
 }
-                
